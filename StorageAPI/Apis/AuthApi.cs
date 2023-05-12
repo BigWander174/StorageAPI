@@ -1,5 +1,6 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Text;
 using Microsoft.AspNetCore.Mvc;
 
 namespace StorageAPI.Apis;
@@ -12,7 +13,7 @@ public class AuthApi : IApi
         app.MapPost("/auth/register", Register);
     }
     
-    private async Task<IResult> Login([FromBody] AuthRequest request, [FromServices] IUserRepository userRepository,
+    private static async Task<IResult> Login([FromBody] AuthRequest request, [FromServices] IUserRepository userRepository,
         [FromServices] IConfiguration configuration)
     {
         var userFromDb = await userRepository.GetUserByAsync(request);
@@ -21,7 +22,7 @@ public class AuthApi : IApi
             : CreateToken(userFromDb, configuration);
     }
     
-    private async Task<IResult> Register([FromBody] AuthRequest request, [FromServices] IUserRepository userRepository,
+    private static async Task<IResult> Register([FromBody] AuthRequest request, [FromServices] IUserRepository userRepository,
         [FromServices] PasswordHasher<User> passwordHasher, [FromServices] IConfiguration configuration)
     {
         var userFromDb = await userRepository.GetUserByAsync(request.Login);

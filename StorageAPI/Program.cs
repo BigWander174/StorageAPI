@@ -1,3 +1,5 @@
+using System.Text;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
@@ -63,6 +65,8 @@ builder.Services.AddTransient<IApi, TextsApi>();
 builder.Services.AddTransient<IApi, FilesApi>();
 
 var app = builder.Build();
+
+app.UseHttpsRedirection();
 
 app.UseSwagger();
 app.UseSwaggerUI();

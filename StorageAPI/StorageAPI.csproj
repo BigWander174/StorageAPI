@@ -6,6 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+    <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
     <ItemGroup>
       <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.5" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
@@ -13,6 +15,13 @@
       <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
       <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
       <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+      <PackageReference Include="xunit.extensibility.core" Version="2.4.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Tests\StorageAPITests\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="Tests\StorageAPITests\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="Tests\StorageAPITests\obj\StorageAPITests.csproj.nuget.dgspec.json" />
     </ItemGroup>
 
 </Project>
