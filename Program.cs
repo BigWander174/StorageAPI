@@ -16,8 +16,6 @@ builder.Services.AddDbContext<StorageContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresStorage"));
 });
 
-builder.Services.AddSingleton<PasswordHasher<User>>();
-
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme,options =>
     {
@@ -35,6 +33,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddAuthorization();
 
+builder.Services.AddSingleton<PasswordHasher<User>>();
+
 builder.Services.AddScoped<IUserRepository, DbUserRepository>();
 builder.Services.AddScoped<ITextRepository, DbTextRepository>();
 
@@ -45,5 +45,12 @@ var app = builder.Build();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+using var scope = app.Services.CreateScope();
+var apis = scope.ServiceProvider.GetServices<IApi>();
+foreach (var api in apis)
+{
+    api.Configure(app);
+}
 
 app.Run();

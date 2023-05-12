@@ -12,18 +12,15 @@ public class StorageContext : DbContext
     
     public DbSet<User> Users { get; set; }
     public DbSet<Text> Texts { get; set; }
+    public DbSet<FileData> Files { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<User>().ToTable("users");
         modelBuilder.Entity<User>().HasKey(user => user.Email);
-        modelBuilder
-            .Entity<User>()
-            .HasMany(user => user.Texts)
-            .WithOne(text => text.User)
-            .OnDelete(DeleteBehavior.SetNull);
 
         modelBuilder.Entity<Text>().ToTable("texts");
 
+        modelBuilder.Entity<FileData>().ToTable("files_data");
     }
 }
