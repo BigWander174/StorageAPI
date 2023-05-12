@@ -8,6 +8,7 @@ using StorageAPI.Contexts;
 using StorageAPI.Model;
 using StorageAPI.Repositories;
 using StorageAPI.Repositories.Interfaces;
+using StorageAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,6 +39,8 @@ builder.Services.AddSingleton<PasswordHasher<User>>();
 builder.Services.AddScoped<IUserRepository, DbUserRepository>();
 builder.Services.AddScoped<ITextRepository, DbTextRepository>();
 builder.Services.AddScoped<IFileDataRepository, DbFileDataRepository>();
+
+builder.Services.AddScoped<IFileStorageService, OsFileStorageService>();
 
 builder.Services.AddTransient<IApi, AuthApi>();
 builder.Services.AddTransient<IApi, TextsApi>();
