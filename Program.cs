@@ -39,6 +39,7 @@ builder.Services.AddScoped<IUserRepository, DbUserRepository>();
 builder.Services.AddScoped<ITextRepository, DbTextRepository>();
 
 builder.Services.AddTransient<IApi, AuthApi>();
+builder.Services.AddTransient<IApi, TextsApi>();
 
 var app = builder.Build();
 
