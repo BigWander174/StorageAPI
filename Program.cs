@@ -36,6 +36,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddAuthorization();
 
 builder.Services.AddScoped<IUserRepository, DbUserRepository>();
+builder.Services.AddScoped<ITextRepository, DbTextRepository>();
 
 builder.Services.AddTransient<IApi, AuthApi>();
 
