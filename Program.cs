@@ -44,6 +44,7 @@ builder.Services.AddScoped<IFileStorageService, OsFileStorageService>();
 
 builder.Services.AddTransient<IApi, AuthApi>();
 builder.Services.AddTransient<IApi, TextsApi>();
+builder.Services.AddTransient<IApi, FilesApi>();
 
 var app = builder.Build();
 
