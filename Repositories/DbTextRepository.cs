@@ -1,9 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using StorageAPI.Contexts;
 using StorageAPI.Model;
+using StorageAPI.Repositories.Interfaces;
 using StorageAPI.Requests;
 
-namespace StorageAPI.Repositories.Interfaces;
+namespace StorageAPI.Repositories;
 
 public class DbTextRepository : ITextRepository
 {
