@@ -1,6 +1,3 @@
-using StorageAPI.Model;
-using StorageAPI.Requests;
-
 namespace StorageAPI.Repositories.Interfaces;
 
 public interface IUserRepository

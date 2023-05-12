@@ -1,0 +1,13 @@
+global using System.Text;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.IdentityModel.Tokens;
+global using Microsoft.OpenApi.Models;
+global using StorageAPI.Apis;
+global using StorageAPI.Contexts;
+global using StorageAPI.Model;
+global using StorageAPI.Repositories;
+global using StorageAPI.Repositories.Interfaces;
+global using StorageAPI.Requests;
+global using StorageAPI.Services;

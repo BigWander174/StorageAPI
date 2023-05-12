@@ -1,5 +1,3 @@
-using StorageAPI.Model;
-
 namespace StorageAPI.Services;
 
 public interface IFileStorageService

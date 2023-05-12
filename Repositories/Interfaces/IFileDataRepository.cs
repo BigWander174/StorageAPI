@@ -1,5 +1,3 @@
-using StorageAPI.Model;
-
 namespace StorageAPI.Repositories.Interfaces;
 
 public interface IFileDataRepository

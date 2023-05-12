@@ -1,9 +1,3 @@
-using Microsoft.AspNetCore.Identity;
-using StorageAPI.Contexts;
-using StorageAPI.Model;
-using StorageAPI.Repositories.Interfaces;
-using StorageAPI.Requests;
-
 namespace StorageAPI.Repositories;
 
 public class DbUserRepository : IUserRepository

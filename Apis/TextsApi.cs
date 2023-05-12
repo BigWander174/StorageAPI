@@ -3,8 +3,6 @@ using System.Web;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
-using StorageAPI.Repositories.Interfaces;
-using StorageAPI.Requests;
 
 namespace StorageAPI.Apis;
 

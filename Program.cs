@@ -1,16 +1,3 @@
-using System.Text;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
-using StorageAPI.Apis;
-using StorageAPI.Contexts;
-using StorageAPI.Model;
-using StorageAPI.Repositories;
-using StorageAPI.Repositories.Interfaces;
-using StorageAPI.Services;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();

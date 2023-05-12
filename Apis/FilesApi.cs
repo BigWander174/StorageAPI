@@ -1,9 +1,6 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using StorageAPI.Model;
-using StorageAPI.Repositories.Interfaces;
-using StorageAPI.Services;
 
 namespace StorageAPI.Apis;
 
