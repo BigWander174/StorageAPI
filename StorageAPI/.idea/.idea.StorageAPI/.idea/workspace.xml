@@ -8,33 +8,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="571ff70e-bbee-4afc-b24f-1b02f543ac67" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Apis/AuthApi.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Apis/FilesApi.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Apis/IApi.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Apis/TextsApi.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Contexts/StorageContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GlobalUsings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Model/FileData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Model/Text.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Model/User.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Properties/launchSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Repositories/DbFileDataRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Repositories/DbTextRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Repositories/DbUserRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Repositories/Interfaces/IFileDataRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Repositories/Interfaces/ITextRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Repositories/Interfaces/IUserRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Requests/AddTextRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Requests/AuthRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Services/IFileStorageService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Services/OsFileStorageService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StorageAPI.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StorageAPI.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../global.json" beforeDir="false" />
+    <list default="true" id="571ff70e-bbee-4afc-b24f-1b02f543ac67" name="Changes" comment="move solution to another directory">
+      <change afterPath="$PROJECT_DIR$/Validators/AddTextRequestValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Validators/AuthRequestValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.StorageAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StorageAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apis/AuthApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Apis/AuthApi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apis/FilesApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Apis/FilesApi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apis/TextsApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Apis/TextsApi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/DbUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/DbUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/Interfaces/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/Interfaces/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StorageAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/StorageAPI.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,26 +38,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/ilya/Library/Application Support/JetBrains/Rider2023.1/resharper-host/DecompilerCache",
-      "/Users/ilya/Library/Application Support/JetBrains/Rider2023.1/resharper-host/SourcesCache",
-      "/Users/ilya/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/ilya/Library/Application Support/JetBrains/Rider2023.1/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/ilya/Library/Application Support/JetBrains/Rider2023.1/resharper-host/SourcesCache&quot;,
+      &quot;/Users/ilya/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.StorageAPI: https">
+}</component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.StorageAPI: http">
     <configuration name="StorageAPI: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/StorageAPI.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net7.0" />
@@ -114,6 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683902356602</updated>
       <workItem from="1683902357730" duration="668000" />
+      <workItem from="1683903680085" duration="5501000" />
     </task>
     <task id="LOCAL-00001" summary="Init Tests project">
       <created>1683902639816</created>
@@ -122,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683902639816</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="move solution to another directory">
+      <created>1683903726448</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683903726448</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +132,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="tests" />
+                        <option value="dev" />
                       </list>
                     </value>
                   </entry>
@@ -155,6 +147,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Init Tests project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init Tests project" />
+    <MESSAGE value="move solution to another directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="move solution to another directory" />
   </component>
 </project>

@@ -23,8 +23,10 @@ public class FilesApi : IApi
     }
 
     [AllowAnonymous]
-    private static async Task<IResult> GetFile([FromRoute] string id, HttpContext context, 
-        [FromServices] IFileStorageService fileStorageService, [FromServices] IFileDataRepository fileDataRepository)
+    private static async Task<IResult> GetFile([FromRoute] string id, 
+         HttpContext context, 
+        [FromServices] IFileStorageService fileStorageService, 
+        [FromServices] IFileDataRepository fileDataRepository)
     {
         if (Guid.TryParse(id, out var targetGuid) == false)
         {
@@ -56,9 +58,16 @@ public class FilesApi : IApi
     [Authorize]
     private static async Task<IResult> AddFile(HttpContext context, 
         [FromServices] IFileStorageService fileStorageService,
-        [FromServices] IFileDataRepository fileDataRepository, IFormFile formFile, bool deletable)
+        [FromServices] IFileDataRepository fileDataRepository,
+        [FromForm] IFormFile? file,
+        [FromQuery] bool? deletable)
     {
-        var filePath = await fileStorageService.UploadFile(formFile, GetCurrentUserEmail(context));
+        if (file is null)
+        {
+            return Results.BadRequest("Form file cannot be null");
+        }
+
+        var filePath = await fileStorageService.UploadFile(file, GetCurrentUserEmail(context));
         if (filePath is null)
         {
             return Results.Conflict("File with such name already exists");
@@ -67,8 +76,8 @@ public class FilesApi : IApi
         var newFile = new FileData()
         {
             Path = filePath,
-            Deletable = deletable,
-            Name = formFile.FileName,
+            Deletable = deletable ?? false,
+            Name = file.FileName,
             UserEmail = GetCurrentUserEmail(context)
         };
         
@@ -78,8 +87,10 @@ public class FilesApi : IApi
     }
 
     [Authorize]
-    private static async Task<IResult> DeleteFile(HttpContext context, [FromRoute] string id,
-        [FromServices] IFileStorageService fileService, [FromServices] IFileDataRepository fileDataRepository)
+    private static async Task<IResult> DeleteFile(HttpContext context, 
+        [FromRoute] string id,
+        [FromServices] IFileStorageService fileService, 
+        [FromServices] IFileDataRepository fileDataRepository)
     {
         if (Guid.TryParse(id, out var targetGuid) == false)
         {

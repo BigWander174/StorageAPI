@@ -11,7 +11,7 @@ public class DbUserRepository : IUserRepository
         _passwordHasher = passwordHasher;
     }
 
-    public async Task<User?> GetUserByAsync(AuthRequest request)
+    public async Task<User?> GetUserByAsync(AuthRequest? request)
     {
         var userWithSameLogin = await GetUserByAsync(request.Login);
         if (userWithSameLogin is null)

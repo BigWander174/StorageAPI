@@ -49,8 +49,20 @@ public class TextsApi : IApi
     
     [Authorize]
     private static async Task<IResult> AddTextAsync(HttpContext context, 
-        [FromBody] AddTextRequest request,  [FromServices] ITextRepository textRepository)
+        [FromBody] AddTextRequest? request,  
+        [FromServices] ITextRepository textRepository, 
+        [FromServices] AbstractValidator<AddTextRequest> validator)
     {
+        if (request is null)
+        {
+            return Results.BadRequest("You need to write text info in request body");
+        }
+        var validationResult = await validator.ValidateAsync(request);
+        if (validationResult.IsValid == false)
+        {
+            return Results.ValidationProblem(validationResult.ToDictionary());
+        }
+        
         var id = await textRepository.AddAsync(request, GetCurrentUserEmail(context));
         var downloadLink = context.Request.GetDisplayUrl() + "/" + HttpUtility.UrlEncode(id.ToString());
         return Results.Ok(downloadLink);

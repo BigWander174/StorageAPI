@@ -1,5 +1,3 @@
-using System.Text;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
@@ -51,6 +49,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 
 builder.Services.AddAuthorization();
+
+builder.Services.AddScoped<AbstractValidator<AuthRequest>, AuthRequestValidator>();
+builder.Services.AddScoped<AbstractValidator<AddTextRequest>, AddTextRequestValidator>();
 
 builder.Services.AddSingleton<PasswordHasher<User>>();
 

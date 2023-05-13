@@ -1,6 +1,5 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using System.Text;
 using Microsoft.AspNetCore.Mvc;
 
 namespace StorageAPI.Apis;
@@ -13,18 +12,38 @@ public class AuthApi : IApi
         app.MapPost("/auth/register", Register);
     }
     
-    private static async Task<IResult> Login([FromBody] AuthRequest request, [FromServices] IUserRepository userRepository,
-        [FromServices] IConfiguration configuration)
+    private static async Task<IResult> Login([FromBody] AuthRequest? request, [FromServices] IUserRepository userRepository,
+        [FromServices] IConfiguration configuration, [FromServices] AbstractValidator<AuthRequest?> validator)
     {
+        if (request is null)
+        {
+            return Results.BadRequest("You need to write a login and password in request body");
+        }
+        
+        var validationResult = await validator.ValidateAsync(request);
+        if (validationResult.IsValid == false)
+        {
+            return Results.ValidationProblem(validationResult.ToDictionary());
+        }
+        
         var userFromDb = await userRepository.GetUserByAsync(request);
         return userFromDb is null
             ? Results.NotFound()
             : CreateToken(userFromDb, configuration);
     }
     
-    private static async Task<IResult> Register([FromBody] AuthRequest request, [FromServices] IUserRepository userRepository,
-        [FromServices] PasswordHasher<User> passwordHasher, [FromServices] IConfiguration configuration)
+    private static async Task<IResult> Register([FromBody] AuthRequest request, 
+        [FromServices] IUserRepository userRepository,
+        [FromServices] PasswordHasher<User> passwordHasher, 
+        [FromServices] IConfiguration configuration, 
+        [FromServices] AbstractValidator<AuthRequest> validator)
     {
+        var validationResult = await validator.ValidateAsync(request);
+        if (validationResult.IsValid == false)
+        {
+            return Results.ValidationProblem(validationResult.ToDictionary());
+        }
+        
         var userFromDb = await userRepository.GetUserByAsync(request.Login);
         if (userFromDb is not null)
         {
