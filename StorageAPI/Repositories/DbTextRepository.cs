@@ -14,17 +14,11 @@ public class DbTextRepository : ITextRepository
         return await _context.Texts.Where(text => text.UserEmail == userEmail).ToListAsync();
     }
 
-    public async Task<Guid> AddAsync(AddTextRequest addTextRequest, string? userEmail)
+    public async Task<Guid> AddAsync(Text text)
     {
-        var newText = new Text()
-        {
-            Description = addTextRequest.Description,
-            Deletable = addTextRequest.Deletable,
-            UserEmail = userEmail
-        };
-        await _context.Texts.AddAsync(newText);
+        await _context.Texts.AddAsync(text);
         await _context.SaveChangesAsync();
-        return newText.Id;
+        return text.Id;
     }
 
     public async Task<Text?> GetTextAsync(Guid guid)

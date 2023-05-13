@@ -66,8 +66,9 @@ public class TextsApi : IApi
         {
             return Results.ValidationProblem(validationResult.ToDictionary());
         }
-        
-        var id = await textRepository.AddAsync(request, GetCurrentUserEmail(context));
+
+        var text = request.ToText(GetCurrentUserEmail(context));
+        var id = await textRepository.AddAsync(text);
         var downloadLink = context.Request.GetDisplayUrl() + "/" + HttpUtility.UrlEncode(id.ToString());
         return Results.Ok(downloadLink);
     }

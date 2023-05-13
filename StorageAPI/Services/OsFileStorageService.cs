@@ -31,6 +31,10 @@ public class OsFileStorageService : IFileStorageService
 
     public void DeleteFile(string filePath)
     {
+        if (File.Exists(filePath) == false)
+        {
+            return;
+        }
         File.Delete(filePath);
     }
 
