@@ -1,6 +1,7 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using StorageAPI.Mapping;
 
 namespace StorageAPI.Apis;
 
@@ -19,7 +20,8 @@ public class FilesApi : IApi
         [FromServices] IFileDataRepository fileDataRepository)
     {
         var files = await fileDataRepository.GetAllFilesAsync(GetCurrentUserEmail(context));
-        return Results.Json(files);
+        var filesDto = files.Select(file => file.ToFileDto());
+        return Results.Json(filesDto);
     }
 
     [AllowAnonymous]

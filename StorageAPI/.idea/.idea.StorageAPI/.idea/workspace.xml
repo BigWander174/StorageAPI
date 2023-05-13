@@ -8,17 +8,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="571ff70e-bbee-4afc-b24f-1b02f543ac67" name="Changes" comment="move solution to another directory">
-      <change afterPath="$PROJECT_DIR$/Validators/AddTextRequestValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Validators/AuthRequestValidator.cs" afterDir="false" />
+    <list default="true" id="571ff70e-bbee-4afc-b24f-1b02f543ac67" name="Changes" comment="add validation to auth, add text endpoints and handle endpoints exceptions">
+      <change afterPath="$PROJECT_DIR$/Dtos/FileDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dtos/TextDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mapping/AuthRequestToUser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mapping/FileDataToFileDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mapping/TextToTextDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.StorageAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StorageAPI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Apis/AuthApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Apis/AuthApi.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Apis/FilesApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Apis/FilesApi.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Apis/TextsApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Apis/TextsApi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/DbUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/DbUserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/Interfaces/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/Interfaces/IUserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StorageAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/StorageAPI.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +30,10 @@
         <entry key="$PROJECT_DIR$/.." value="tests" />
       </map>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/ilya/Projects/StorageAPI/StorageAPI/Apis/AuthApi.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ilya/Projects/StorageAPI/StorageAPI/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="2PhHNoUL8NSWKObqAYk13qSaU6K" />
@@ -98,7 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683902356602</updated>
       <workItem from="1683902357730" duration="668000" />
-      <workItem from="1683903680085" duration="5501000" />
+      <workItem from="1683903680085" duration="7362000" />
     </task>
     <task id="LOCAL-00001" summary="Init Tests project">
       <created>1683902639816</created>
@@ -114,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683903726448</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add validation to auth, add text endpoints and handle endpoints exceptions">
+      <created>1683949603736</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683949603736</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +158,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Init Tests project" />
     <MESSAGE value="move solution to another directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="move solution to another directory" />
+    <MESSAGE value="add validation to auth, add text endpoints and handle endpoints exceptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="add validation to auth, add text endpoints and handle endpoints exceptions" />
   </component>
 </project>

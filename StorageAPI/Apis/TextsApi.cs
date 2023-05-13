@@ -3,6 +3,7 @@ using System.Web;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using StorageAPI.Mapping;
 
 namespace StorageAPI.Apis;
 
@@ -21,7 +22,8 @@ public class TextsApi : IApi
         [FromServices] ITextRepository textRepository)
     {
         var texts = await textRepository.GetAllTextsAsync(GetCurrentUserEmail(context));
-        return Results.Json(texts);
+        var textsDto = texts.Select(text => text.ToTextDto());
+        return Results.Json(textsDto);
     }
     
     [AllowAnonymous]
@@ -43,8 +45,10 @@ public class TextsApi : IApi
         {
             await textRepository.RemoveAsync(targetGuid);
         }
+
+        var dto = targetText.ToTextDto();
         
-        return Results.Ok(targetText.Description);
+        return Results.Json(dto);
     }
     
     [Authorize]

@@ -1,6 +1,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
+using StorageAPI.Mapping;
 
 namespace StorageAPI.Apis;
 
@@ -50,12 +51,7 @@ public class AuthApi : IApi
             return Results.Conflict("User with such email already exists");
         }
 
-        var user = new User()
-        {
-            Email = request.Login,
-            Password = request.Password
-        };
-        
+        var user = request.ToUser();
         user.Password = passwordHasher.HashPassword(user, user.Password);
         
         await userRepository.AddAsync(user);
