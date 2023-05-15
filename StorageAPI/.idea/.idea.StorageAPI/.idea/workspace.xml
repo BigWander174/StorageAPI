@@ -9,22 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="571ff70e-bbee-4afc-b24f-1b02f543ac67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../StorageApi.Tests/Auth/AuthRequestTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StorageApi.Tests/Auth/LoginTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StorageApi.Tests/Auth/RegisterTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StorageApi.Tests/Consts.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StorageApi.Tests/Files.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StorageApi.Tests/StorageApi.Tests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StorageApi.Tests/Texts.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StorageApi.Tests/Usings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.StorageAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StorageAPI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apis/TextsApi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Apis/TextsApi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StorageAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/StorageAPI.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StorageAPI.sln" beforeDir="false" afterPath="$PROJECT_DIR$/StorageAPI.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StorageApi.Tests/StorageApi.Tests/Apis/TextsTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StorageApi.Tests/StorageApi.Tests/Consts.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StorageAPI.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/StorageAPI.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Validators/AddTextRequestValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Validators/AddTextRequestValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StorageApi.Tests/StorageApi.Tests/StorageApi.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../StorageApi.Tests/StorageApi.Tests/StorageApi.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StorageApi.Tests/StorageApi.Tests/UnitTest1.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +27,10 @@
       </map>
     </option>
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
   }
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -80,6 +68,7 @@
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/StorageApi.Tests/TextsTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/38284ca4f4afe378f96fccac3e179f4bceda7a74eb151623b66d2dc3634d9b/ExceptionAggregator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3b92f859131bde25d0f7a63de08963e995d1e1426e584dfd4b8e833d2d3dba/ExecutionTimer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3d39b7365ca42b2d8c4e732f62ab42f8e55276a28f58835d74b42ccc2bc1/XunitTestRunner.cs" root0="SKIP_HIGHLIGHTING" />
@@ -87,7 +76,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bce78fe52d797846b2e554f7e0fb8c831d7f4aeee133452a18131aee2eb9b2/ReflectionAbstractionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d5bbff7f0797f8a5eac558803fc11ee7d94c9e84440dc58bc674915efec8/TestRunner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f5545b2656401abe1a371ad2756d7d2328a38293f7ee8b163801bbf55cee8/TestInvoker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Api.Tests/Api.Tests/UnitTest1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/ilya/Projects/StorageAPI/StorageAPI/Apis/AuthApi.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ilya/Projects/StorageAPI/StorageAPI/Apis/TextsApi.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/ilya/Projects/StorageAPI/StorageAPI/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -99,32 +91,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "RiderNuGetOptionsPageId",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;RiderNuGetOptionsPageId&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "redshift",
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;redshift&quot;,
+      &quot;postgresql&quot;
     ],
-    "rider.external.source.directories": [
-      "/Users/ilya/Library/Application Support/JetBrains/Rider2023.1/resharper-host/DecompilerCache",
-      "/Users/ilya/Library/Application Support/JetBrains/Rider2023.1/resharper-host/SourcesCache",
-      "/Users/ilya/.local/share/Symbols/src"
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/ilya/Library/Application Support/JetBrains/Rider2023.1/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/ilya/Library/Application Support/JetBrains/Rider2023.1/resharper-host/SourcesCache&quot;,
+      &quot;/Users/ilya/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.StorageAPI: http">
     <configuration name="StorageAPI: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/StorageAPI.csproj" />
@@ -278,7 +270,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683951060751</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="init unit test project">
+      <created>1684139785100</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684139785100</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add auth tests">
+      <created>1684140286441</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684140286441</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,6 +321,8 @@
     <MESSAGE value="move solution to another directory" />
     <MESSAGE value="add validation to auth, add text endpoints and handle endpoints exceptions" />
     <MESSAGE value="add textDto, fileDto, mapping authRequest to user" />
-    <option name="LAST_COMMIT_MESSAGE" value="add textDto, fileDto, mapping authRequest to user" />
+    <MESSAGE value="init unit test project" />
+    <MESSAGE value="add auth tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="add auth tests" />
   </component>
 </project>

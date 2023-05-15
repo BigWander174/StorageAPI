@@ -29,25 +29,6 @@
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a11bee0a_002D647c_002D4290_002D9e8c_002D3a932daf3ef4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GetAllFiles_Ok" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.Files.GetAllFiles_Ok&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.Files.UploadFile&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.Texts.GetTexts_ReturnsOk_WhenAuthorized&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.Texts.GetTextById_ReturnsOk_WhenTextExists&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.Texts.GetTextById_ReturnsNotFound_WhenTextNotExists&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.Texts.AddText_ReturnsBadRequest_WhenRequestBodyIsNull&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.Texts.AddText_ReturnsOk_WhenValidBody&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.Texts.DeleteTextById_ReturnsOk_WhenTextExist&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.Texts.DeleteTextById_ReturnsNotFound_WhereTextNotExist&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.Texts.DeleteTextById_ReturnsUnAuthorized_WhenJwtInvalid&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.Texts&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.Auth.LoginTests&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.Auth.RegisterTests.Register_ReturnsConflict_WhenUserExists&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.Auth.RegisterTests.Register_ReturnsOk_WhenUserNotExist&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.Files.GetDeletableFile_Ok&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.AuthTests.Login_ReturnsOk_WhenUserNotExist&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.AuthTests.Login_ReturnsBadRequest_WhenUserNotExist&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.AuthTests.Login_ReturnsOk_WhenUserExists&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.AuthTests.Register_ReturnsOk_WhenUserNotExists&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BD4828A4-CDE2-476F-818F-65E4EA412806::net7.0::StorageApi.Tests.AuthTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::928D34C0-190D-4A32-A2CA-505013E8304C::net7.0::StorageApi.Tests.Apis.AuthTests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
