@@ -61,6 +61,7 @@ public class TextsApi : IApi
         {
             return Results.BadRequest("You need to write text info in request body");
         }
+        
         var validationResult = await validator.ValidateAsync(request);
         if (validationResult.IsValid == false)
         {

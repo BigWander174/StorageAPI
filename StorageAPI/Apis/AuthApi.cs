@@ -33,12 +33,17 @@ public class AuthApi : IApi
             : CreateToken(userFromDb, configuration);
     }
     
-    private static async Task<IResult> Register([FromBody] AuthRequest request, 
+    private static async Task<IResult> Register([FromBody] AuthRequest? request, 
         [FromServices] IUserRepository userRepository,
         [FromServices] PasswordHasher<User> passwordHasher, 
         [FromServices] IConfiguration configuration, 
         [FromServices] AbstractValidator<AuthRequest> validator)
     {
+        if (request is null)
+        {
+            return Results.BadRequest("You need to write a login and password in request body");
+        }
+        
         var validationResult = await validator.ValidateAsync(request);
         if (validationResult.IsValid == false)
         {

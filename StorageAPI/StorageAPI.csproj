@@ -23,6 +23,9 @@
       <_ContentIncludedByDefault Remove="Tests\StorageAPITests\obj\project.assets.json" />
       <_ContentIncludedByDefault Remove="Tests\StorageAPITests\obj\project.packagespec.json" />
       <_ContentIncludedByDefault Remove="Tests\StorageAPITests\obj\StorageAPITests.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="ApiTesting\obj\ApiTesting.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="ApiTesting\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="ApiTesting\obj\project.packagespec.json" />
     </ItemGroup>
 
 </Project>
