@@ -30,5 +30,10 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a11bee0a_002D647c_002D4290_002D9e8c_002D3a932daf3ef4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GetAllFiles_Ok" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::928D34C0-190D-4A32-A2CA-505013E8304C::net7.0::StorageApi.Tests.Apis.AuthTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::928D34C0-190D-4A32-A2CA-505013E8304C::net7.0::StorageApi.Tests.Apis.TextsTests.GetTexts_ReturnsOk_WhenAuthorized&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::928D34C0-190D-4A32-A2CA-505013E8304C::net7.0::StorageApi.Tests.Apis.TextsTests.GetDeletableText_ReturnsOk_WhenTextExist&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::928D34C0-190D-4A32-A2CA-505013E8304C::net7.0::StorageApi.Tests.Apis.TextsTests.GetNotDeletableText_ReturnsOk_WhenTextExist&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::928D34C0-190D-4A32-A2CA-505013E8304C::net7.0::StorageApi.Tests.Apis.TextsTests.UploadText_ReturnOk_WhenAuthorized&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::928D34C0-190D-4A32-A2CA-505013E8304C::net7.0::StorageApi.Tests.Apis.TextsTests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
