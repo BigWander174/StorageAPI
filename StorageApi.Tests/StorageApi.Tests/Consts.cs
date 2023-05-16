@@ -1,5 +1,3 @@
-using StorageAPI.Requests;
-
 namespace StorageAPI.Tests;
 
 public static class Consts
@@ -15,22 +13,23 @@ public static class Consts
         Password = "1234567"
     };
 
-    public static AddTextRequest AddDeletableTextRequest = new AddTextRequest()
+    public static AddTextRequest AddTextRequest = new AddTextRequest()
     {
         Deletable = true,
         Description = "test"
     };
 
-    public static AddTextRequest AddNotDeletableTextRequest = new AddTextRequest()
-    {
-        Deletable = false,
-        Description = "test2"
-    };
-
-    public static Text Text = new Text()
+    public static Text DeletableText = new Text()
     {
         Deletable = true,
         Description = "test",
+        UserEmail = AuthRequest.Login
+    };
+    
+    public static Text NotDeletableText = new Text()
+    {
+        Deletable = false,
+        Description = "test2",
         UserEmail = AuthRequest.Login
     };
 }

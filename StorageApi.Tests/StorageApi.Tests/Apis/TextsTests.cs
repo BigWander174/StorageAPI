@@ -3,14 +3,10 @@ namespace StorageApi.Tests.Apis;
 public class TextsTests : WebApplicationFactory<Program>
 {
     private readonly StorageContext _context;
-    private readonly User _testUser;
-    private readonly Text _testText;
 
     public TextsTests()
     {
         _context = Services.CreateScope().ServiceProvider.GetRequiredService<StorageContext>();
-        _testUser = Consts.AuthRequest.ToUser();
-        _testUser.Password = new PasswordHasher<User>().HashPassword(_testUser, _testUser.Password);
     }
 
     [Fact]
@@ -38,28 +34,27 @@ public class TextsTests : WebApplicationFactory<Program>
     [Fact]
     public async Task GetDeletableText_ReturnsOk_WhenTextExist()
     {
-        var userEmail = Consts.AuthRequest.Login;
-        var text = await AddTextToDb(Consts.AddDeletableTextRequest.ToText(userEmail));
+        await AddTextToDb(Consts.DeletableText);
 
         using var client = CreateClient();
-        var response = await client.GetAsync($"texts/{text.Id}");
+        var response = await client.GetAsync($"texts/{Consts.DeletableText.Id}");
         
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-        Assert.Null(_context.Texts.FirstOrDefault(t => t.Id == text.Id));
+        Assert.Null(_context.Texts.FirstOrDefault(t => t.Id == Consts.DeletableText.Id));
     }
     
     [Fact]
     public async Task GetNotDeletableText_ReturnsOk_WhenTextExist()
     {
-        var userEmail = Consts.AuthRequest.Login;
-        var text = await AddTextToDb(Consts.AddNotDeletableTextRequest.ToText(userEmail));
+        var text = Consts.NotDeletableText;
+        await AddTextToDb(text);
 
         using var client = CreateClient();
         var response = await client.GetAsync($"texts/{text.Id}");
 
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         Assert.NotNull(_context.Texts.FirstOrDefault(t => t.Id == text.Id));
-        RemoveTextFromDb(_context.Texts.First(t => t.Id == text.Id));
+        await RemoveTextFromDb(text);
     }
     
     [Fact]
@@ -67,23 +62,28 @@ public class TextsTests : WebApplicationFactory<Program>
     {
         using var client = CreateClientWithAuthHeader();
 
-        var response = await client.PostAsJsonAsync("/texts", Consts.AddDeletableTextRequest);
+        var response = await client.PostAsJsonAsync("/texts", Consts.AddTextRequest);
         
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         Assert.NotEmpty(await response.Content.ReadAsStringAsync());
+
+        
+        _context.Texts.Remove(_context.Texts.FirstOrDefault(text =>
+            text.Description == Consts.AddTextRequest.Description));
+        await _context.SaveChangesAsync();
     }
     
     [Fact]
     public async Task DeleteText_ReturnsOk_WhenTextExist()
     {
-        var text = await AddTextToDb(Consts.Text);
+        AddTextToDb(Consts.DeletableText);
 
         using var client = CreateClientWithAuthHeader();
 
-        var response = await client.DeleteAsync($"/texts/{text.Id}");
+        var response = await client.DeleteAsync($"/texts/{Consts.DeletableText.Id}");
         
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-        Assert.Null(_context.Texts.FirstOrDefault(t => t.Id == text.Id));
+        Assert.Null(_context.Texts.FirstOrDefault(t => t.Id == Consts.DeletableText.Id));
     }
 
     [Fact]
@@ -128,17 +128,15 @@ public class TextsTests : WebApplicationFactory<Program>
         return jwt;
     }
     
-    private async Task<Text> AddTextToDb(Text text)
+    private async Task AddTextToDb(Text text)
     {
         await _context.Texts.AddAsync(text);
         await _context.SaveChangesAsync();
-
-        return text;
     }
 
-    private void RemoveTextFromDb(Text text)
+    private async Task RemoveTextFromDb(Text text)
     {
         _context.Texts.Remove(text);
-        _context.SaveChanges();
+        await _context.SaveChangesAsync();
     }
 }

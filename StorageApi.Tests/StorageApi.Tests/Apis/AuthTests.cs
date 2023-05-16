@@ -1,14 +1,3 @@
-using System.Net;
-using System.Net.Http.Json;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.Extensions.DependencyInjection;
-using StorageAPI;
-using StorageAPI.Contexts;
-using StorageAPI.Mapping;
-using StorageAPI.Model;
-using StorageAPI.Tests;
-
 namespace StorageApi.Tests.Apis;
 
 public class AuthTests : WebApplicationFactory<Program>
